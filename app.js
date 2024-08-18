@@ -10,35 +10,35 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Define a route
 app.get("/services", (req, res) => {
-  res.render("services", { title: "Services Page" });
+  res.render("services.ejs", { title: "Services Page" });
 });
 
 app.get("/services/:service", (req, res) => {
-  res.render("service-details", { title: "Service Details" });
+  res.render("service-details.ejs", { title: "Service Details" });
 });
 
 app.get("/cases", (req, res) => {
-  res.render("cases", { title: "Cases Page" });
+  res.render("cases.ejs", { title: "Cases Page" });
 });
 
 app.get("/cases/:case", (req, res) => {
-  res.render("case-details", { title: "Case Details" });
+  res.render("case-details.ejs", { title: "Case Details" });
 });
 
 app.get("/schedule-consult", (req, res) => {
-  res.render("schedule-consult", { title: "Schedule Consult" });
+  res.render("schedule-consult.ejs", { title: "Schedule Consult" });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", { title: "Contact Us" });
+  res.render("contact.ejs", { title: "Contact Us" });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Us" });
+  res.render("about.ejs", { title: "About Us" });
 });
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home Page" });
+  res.render("index.ejs", { title: "Home Page" });
 });
 
 const PORT = process.env.PORT || 8000;
