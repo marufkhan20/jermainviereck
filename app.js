@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const fs = require("fs");
 
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
