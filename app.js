@@ -5,6 +5,16 @@ const path = require("path");
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
 
+// Set the views directory
+app.set("views", path.join(__dirname, "views"));
+
+const partialPath = path.join(__dirname, "views", "partials", "header.ejs");
+if (fs.existsSync(partialPath)) {
+  console.log("Partial file exists");
+} else {
+  console.error("Partial file does not exist");
+}
+
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
 
