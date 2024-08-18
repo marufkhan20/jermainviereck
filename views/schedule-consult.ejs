@@ -1,380 +1,616 @@
-<%- include('partials/header.ejs') %>
-
-<!-- hero section start -->
-<section class="w-full pt-[80px] sm:pt-[120px] md:pt-[200px]">
-  <div class="container pb-20">
-    <div class="flex flex-col lg:flex-row justify-between gap-10">
-      <div class="w-full lg:w-[50%] xl:w-[60%]">
-        <h2
-          class="font-semibold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-        >
-          Your journey to unlocking the true potential of data and AI begins
-          with a personalized 30-minute consultation
-        </h2>
-        <p class="text-[#666666] text-lg mt-6">
-          Our collective approach fosters teamwork, collaboration, and support,
-          recognising the power of collaboration for greater success.
-          <span class="font-semibold"
-            >ADC Consulting – where it all adds up.</span
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="/css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="fixed bg-white h-fit inset-0 w-full z-50">
+      <div
+        class="container py-5 flex items-center justify-between gap-5 flex-wrap"
+      >
+        <div>
+          <a href="/">
+            <img class="w-44" src="/images/logo.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="hidden lg:block">
+          <ul
+            class="flex items-center gap-7 text-lg font-medium text-[#232323]"
           >
-        </p>
-      </div>
+            <li class="transition-all hover:text-primary">
+              <a href="/services">Services</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/cases">Cases</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/about">About Us</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="flex-1 bg-white shadow-xl rounded-3xl p-10 border">
-        <h2 class="mb-12 font-semibold text-xl md:text-2xl lg:text-3xl">
-          Schedule a free consult
-        </h2>
-        <form action="" class="w-full flex flex-col gap-8">
-          <div class="grid sm:grid-cols-2 gap-8 sm:gap-5">
-            <input
-              type="text"
-              class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
-              placeholder="Last Name"
-            />
+        <div class="hidden lg:block">
+          <a
+            href="/schedule-consult"
+            class="font-bold py-4 px-8 rounded-md bg-primary text-white transition-all hover:bg-black"
+            >Get Consultant</a
+          >
+        </div>
+
+        <div class="block lg:hidden">
+          <i class="fa-solid fa-bars cursor-pointer"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section start -->
+    <section class="w-full pt-[80px] sm:pt-[120px] md:pt-[200px]">
+      <div class="container pb-20">
+        <div class="flex flex-col lg:flex-row justify-between gap-10">
+          <div class="w-full lg:w-[50%] xl:w-[60%]">
+            <h2
+              class="font-semibold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+            >
+              Your journey to unlocking the true potential of data and AI begins
+              with a personalized 30-minute consultation
+            </h2>
+            <p class="text-[#666666] text-lg mt-6">
+              Our collective approach fosters teamwork, collaboration, and
+              support, recognising the power of collaboration for greater
+              success.
+              <span class="font-semibold"
+                >ADC Consulting – where it all adds up.</span
+              >
+            </p>
           </div>
-          <input
-            type="number"
-            class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
-            placeholder="Phone Number"
-          />
-          <input
-            type="email"
-            class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
-            placeholder="Email"
-          />
-          <textarea
-            class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
-            placeholder="Message"
-          ></textarea>
+
+          <div class="flex-1 bg-white shadow-xl rounded-3xl p-10 border">
+            <h2 class="mb-12 font-semibold text-xl md:text-2xl lg:text-3xl">
+              Schedule a free consult
+            </h2>
+            <form action="" class="w-full flex flex-col gap-8">
+              <div class="grid sm:grid-cols-2 gap-8 sm:gap-5">
+                <input
+                  type="text"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  placeholder="Last Name"
+                />
+              </div>
+              <input
+                type="number"
+                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                placeholder="Phone Number"
+              />
+              <input
+                type="email"
+                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                placeholder="Email"
+              />
+              <textarea
+                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                placeholder="Message"
+              ></textarea>
+              <div>
+                <a
+                  href="#"
+                  class="font-bold py-4 px-14 rounded-full bg-primary text-white transition-all inline-block hover:bg-black"
+                  >Submit</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-4.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- about section start -->
+    <section class="py-24 bg-[#F7F7F7]">
+      <div class="container">
+        <div class="mt-16 grid sm:grid-cols-3 gap-10">
           <div>
+            <img src="/images/consult/1.jpg" class="w-full rounded-lg" alt="" />
+          </div>
+          <div class="col-span-2">
+            <p class="text-[#666] text-lg">
+              Here’s a glimpse of what you can expect:
+            </p>
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-3">
+                1. Understanding Your Goals:
+              </h3>
+              <p>
+                In the first few minutes, our expert consultants will dive into
+                understanding your organization’s goals, challenges, and
+                aspirations. We’re here to listen, ensuring that we grasp the
+                nuances of your unique situation.
+              </p>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-3">
+                2. Tailored Solutions Discussion:
+              </h3>
+              <p>
+                Based on your specific needs, we’ll provide insights into how
+                data and AI can be tailored to address your challenges and drive
+                your organization towards its objectives. Expect a focused
+                discussion on potential solutions.
+              </p>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-3">
+                3. Strategic Roadmap Preview:
+              </h3>
+              <p>
+                Our consultants will outline a preliminary strategic roadmap,
+                showcasing how the integration of data and AI can impact your
+                organization positively. We believe in tangible results, and
+                we’ll discuss how our approach aligns with your goals.
+              </p>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-3">
+                4. Q&A and Collaboration:
+              </h3>
+              <p>
+                Your questions and insights are crucial. The consultation is an
+                open forum for discussion. Feel free to ask questions, share
+                concerns, and collaborate with our experts to refine the
+                proposed solutions further.
+              </p>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold mb-3">
+                5. Next Steps and Action Plan:
+              </h3>
+              <p>
+                Before the 30 minutes conclude, we’ll outline clear next steps
+                and an action plan. Whether it’s further discussions, a detailed
+                proposal, or specific initiatives to kickstart, you’ll leave the
+                consultation with a roadmap for the way forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- feedback section start -->
+    <section class="py-24 bg-white">
+      <div class="container">
+        <div class="sm:w-[70%] md:w-[60%] mx-auto flex-1 overflow-hidden">
+          <div class="slider-container">
+            <div class="slider pb-16">
+              <div class="slide">
+                <p class="text-xl leading-[36px] text-[#666]">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quisquam distinctio, soluta est alias repellat aliquam eaque
+                  dolor error recusandae a! Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                </p>
+                <div
+                  class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                >
+                  <div>
+                    <h3 class="text-[22px] font-semibold">John Doe</h3>
+                    <span class="text-[15px] text-[#666] uppercase"
+                      >marketing manager</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <p class="text-xl leading-[36px] text-[#666]">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quisquam distinctio, soluta est alias repellat aliquam eaque
+                  dolor error recusandae a! Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                </p>
+                <div
+                  class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                >
+                  <div>
+                    <h3 class="text-[22px] font-semibold">John Doe</h3>
+                    <span class="text-[15px] text-[#666] uppercase"
+                      >marketing manage sdfr</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <p class="text-xl leading-[36px] text-[#666]">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quisquam distinctio, soluta est alias repellat aliquam eaque
+                  dolor error recusandae a! Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                </p>
+                <div
+                  class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                >
+                  <div>
+                    <h3 class="text-[22px] font-semibold">John Doe</h3>
+                    <span class="text-[15px] text-[#666] uppercase"
+                      >marketing manager</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <p class="text-xl leading-[36px] text-[#666]">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Quisquam distinctio, soluta est alias repellat aliquam eaque
+                  dolor error recusandae a! Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                </p>
+                <div
+                  class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                >
+                  <div>
+                    <h3 class="text-[22px] font-semibold">John Doe</h3>
+                    <span class="text-[15px] text-[#666] uppercase"
+                      >marketing manage sdfr</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- navigation -->
+            <div
+              class="flex items-center gap-5 absolute left-[50%] translate-x-[-50%] bottom-3"
+            >
+              <div class="bg-gray-400 text-white nav-button prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <div class="bg-gray-400 text-white nav-button next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feedback section end -->
+
+    <!-- cases section start -->
+    <section class="py-24 bg-[#F7F7F7]">
+      <div class="container">
+        <h2
+          class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+        >
+          Our Cases
+        </h2>
+        <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
+          Find inspiration, gain valuable insights, and discover effective
+          solutions.
+        </p>
+
+        <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
+                >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
+              </div>
+            </div>
             <a
               href="#"
-              class="font-bold py-4 px-14 rounded-full bg-primary text-white transition-all inline-block hover:bg-black"
-              >Submit</a
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >Picked up a Brussels burger Sprouts with ham</a
+            >
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
             >
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="mt-20">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/images/services/company-1.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-2.svg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-2.svg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-4.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-1.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-3.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- hero section end -->
-
-<!-- about section start -->
-<section class="py-24 bg-[#F7F7F7]">
-  <div class="container">
-    <div class="mt-16 grid sm:grid-cols-3 gap-10">
-      <div>
-        <img src="/images/consult/1.jpg" class="w-full rounded-lg" alt="" />
-      </div>
-      <div class="col-span-2">
-        <p class="text-[#666] text-lg">
-          Here’s a glimpse of what you can expect:
-        </p>
-        <div class="mt-8">
-          <h3 class="text-xl font-semibold mb-3">
-            1. Understanding Your Goals:
-          </h3>
-          <p>
-            In the first few minutes, our expert consultants will dive into
-            understanding your organization’s goals, challenges, and
-            aspirations. We’re here to listen, ensuring that we grasp the
-            nuances of your unique situation.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-xl font-semibold mb-3">
-            2. Tailored Solutions Discussion:
-          </h3>
-          <p>
-            Based on your specific needs, we’ll provide insights into how data
-            and AI can be tailored to address your challenges and drive your
-            organization towards its objectives. Expect a focused discussion on
-            potential solutions.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-xl font-semibold mb-3">
-            3. Strategic Roadmap Preview:
-          </h3>
-          <p>
-            Our consultants will outline a preliminary strategic roadmap,
-            showcasing how the integration of data and AI can impact your
-            organization positively. We believe in tangible results, and we’ll
-            discuss how our approach aligns with your goals.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-xl font-semibold mb-3">4. Q&A and Collaboration:</h3>
-          <p>
-            Your questions and insights are crucial. The consultation is an open
-            forum for discussion. Feel free to ask questions, share concerns,
-            and collaborate with our experts to refine the proposed solutions
-            further.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-xl font-semibold mb-3">
-            5. Next Steps and Action Plan:
-          </h3>
-          <p>
-            Before the 30 minutes conclude, we’ll outline clear next steps and
-            an action plan. Whether it’s further discussions, a detailed
-            proposal, or specific initiatives to kickstart, you’ll leave the
-            consultation with a roadmap for the way forward.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- about section end -->
-
-<!-- feedback section start -->
-<section class="py-24 bg-white">
-  <div class="container">
-    <div class="sm:w-[70%] md:w-[60%] mx-auto flex-1 overflow-hidden">
-      <div class="slider-container">
-        <div class="slider pb-16">
-          <div class="slide">
-            <p class="text-xl leading-[36px] text-[#666]">
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Quisquam distinctio, soluta est alias repellat aliquam eaque dolor
-              error recusandae a! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit, facere! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Fugit, facere!"
-            </p>
-            <div class="mt-8 flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <h3 class="text-[22px] font-semibold">John Doe</h3>
-                <span class="text-[15px] text-[#666] uppercase"
-                  >marketing manager</span
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
                 >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
               </div>
             </div>
-          </div>
-          <div class="slide">
-            <p class="text-xl leading-[36px] text-[#666]">
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Quisquam distinctio, soluta est alias repellat aliquam eaque dolor
-              error recusandae a! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit, facere! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Fugit, facere!"
-            </p>
-            <div class="mt-8 flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <h3 class="text-[22px] font-semibold">John Doe</h3>
-                <span class="text-[15px] text-[#666] uppercase"
-                  >marketing manage sdfr</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <p class="text-xl leading-[36px] text-[#666]">
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Quisquam distinctio, soluta est alias repellat aliquam eaque dolor
-              error recusandae a! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit, facere! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Fugit, facere!"
-            </p>
-            <div class="mt-8 flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <h3 class="text-[22px] font-semibold">John Doe</h3>
-                <span class="text-[15px] text-[#666] uppercase"
-                  >marketing manager</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <p class="text-xl leading-[36px] text-[#666]">
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Quisquam distinctio, soluta est alias repellat aliquam eaque dolor
-              error recusandae a! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit, facere! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Fugit, facere!"
-            </p>
-            <div class="mt-8 flex items-center justify-between flex-wrap gap-4">
-              <div>
-                <h3 class="text-[22px] font-semibold">John Doe</h3>
-                <span class="text-[15px] text-[#666] uppercase"
-                  >marketing manage sdfr</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- navigation -->
-        <div
-          class="flex items-center gap-5 absolute left-[50%] translate-x-[-50%] bottom-3"
-        >
-          <div class="bg-gray-400 text-white nav-button prev">
-            <i class="fa-solid fa-arrow-left"></i>
-          </div>
-          <div class="bg-gray-400 text-white nav-button next">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- feedback section end -->
-
-<!-- cases section start -->
-<section class="py-24 bg-[#F7F7F7]">
-  <div class="container">
-    <h2
-      class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-    >
-      Our Cases
-    </h2>
-    <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
-      Find inspiration, gain valuable insights, and discover effective
-      solutions.
-    </p>
-
-    <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
-          >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
+            <a
+              href="#"
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >This prefabrice passive house is highly sustainable</a
             >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >Picked up a Brussels burger Sprouts with ham</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
-      </div>
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
-          >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
             >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
           </div>
-        </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >This prefabrice passive house is highly sustainable</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
-      </div>
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
-          >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
+                >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >Announcing if attachment resolution sentim.</a
             >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
+            >
           </div>
         </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >Announcing if attachment resolution sentim.</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
       </div>
-    </div>
-  </div>
-</section>
-<!-- cases section end -->
+    </section>
+    <!-- cases section end -->
 
-<!-- about section start -->
-<section class="py-24 bg-white">
-  <div class="container">
-    <div class="grid md:grid-cols-2 items-center gap-10">
-      <div>
-        <h2 class="font-normal text-[30px] leading-[50px]">
-          What stage is your organisation in on its data-driven journey?
-        </h2>
-        <p class="mt-5 text-[#666] text-lg">
-          Discover your data maturity stage. Take our Data Maturity Assessment
-          to find out and gain valuable insights into your organisation’s data
-          practices.
-        </p>
-        <div class="mt-5 flex items-center gap-3">
-          <a
-            href="#"
-            class="font-bold py-4 px-8 rounded-full bg-primary text-white transition-all hover:bg-black"
-            >Read more about the assessment</a
-          >
+    <!-- about section start -->
+    <section class="py-24 bg-white">
+      <div class="container">
+        <div class="grid md:grid-cols-2 items-center gap-10">
+          <div>
+            <h2 class="font-normal text-[30px] leading-[50px]">
+              What stage is your organisation in on its data-driven journey?
+            </h2>
+            <p class="mt-5 text-[#666] text-lg">
+              Discover your data maturity stage. Take our Data Maturity
+              Assessment to find out and gain valuable insights into your
+              organisation’s data practices.
+            </p>
+            <div class="mt-5 flex items-center gap-3">
+              <a
+                href="#"
+                class="font-bold py-4 px-8 rounded-full bg-primary text-white transition-all hover:bg-black"
+                >Read more about the assessment</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img
+              src="/images/services/service-footer.png"
+              class="w-full rounded-lg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-      <div class="hidden md:block">
-        <img
-          src="/images/services/service-footer.png"
-          class="w-full rounded-lg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-</section>
-<!-- about section end -->
+    </section>
+    <!-- about section end -->
 
-<%- include('partials/footer.ejs') %>
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Address Section -->
+          <div class="space-y-4">
+            <div>
+              <ul class="space-y-4">
+                <li>
+                  <p>Want to connect?</p>
+                  <h4>
+                    <a
+                      href="mailto:info@validthemes.com"
+                      class="text-primary hover:underline"
+                      >info@validthemes.com</a
+                    >
+                  </h4>
+                </li>
+                <li>
+                  <p>Call us anytime</p>
+                  <h4>
+                    <a
+                      href="tel:+4733378901"
+                      class="text-primary hover:underline"
+                      >+4733378901</a
+                    >
+                  </h4>
+                </li>
+                <li>
+                  <p>Our Location</p>
+                  <h4>175 10h Street, Office 375 Berlin, Devolina 21562</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Quick Links Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="about-us.html" class="text-primary hover:underline"
+                  >Company Profile</a
+                >
+              </li>
+              <li>
+                <a href="contact-us.html" class="text-primary hover:underline"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="about-us.html" class="text-primary hover:underline"
+                  >Career</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html" class="text-primary hover:underline"
+                  >Plans & Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-with-sidebar.html"
+                  class="text-primary hover:underline"
+                  >News & Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Our Services Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Manage investment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Email Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Growth Hacking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Lead Generation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Offline SEO</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Newsletter Section -->
+          <div class="space-y-4">
+            <p>
+              Join our subscribers list to get the latest <br />
+              news and special offers.
+            </p>
+            <form action="#" class="flex flex-col space-y-2">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="p-2 border border-gray-300 rounded"
+                name="email"
+              />
+              <button
+                type="submit"
+                class="bg-primary text-white py-2 px-4 rounded hover:bg-black flex items-center justify-center"
+              >
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </form>
+            <fieldset class="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                class="form-checkbox"
+              />
+              <label for="privacy" class="text-sm"
+                >I agree to the Privacy Policy</label
+              >
+            </fieldset>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-600 mt-8 pt-4">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p>
+              © Copyright 2024. All Rights Reserved by
+              <a href="#" class="text-primary hover:underline">validthemes</a>
+            </p>
+            <ul class="flex space-x-4 mt-4 md:mt-0">
+              <li>
+                <a href="#" class="text-primary hover:underline">Terms</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary hover:underline">Privacy</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary hover:underline">Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/45f30cfcd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

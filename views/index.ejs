@@ -1,612 +1,844 @@
-<%- include('partials/header.ejs') %>
-
-<!-- hero section start -->
-<section
-  class="pt-[80px] sm:pt-[120px] md:pt-[200px] overflow-hidden min-h-[765px] banner-style-one-area"
->
-  <div class="shape-blury"></div>
-  <div class="container relative z-30 grid md:grid-cols-2 gap-10">
-    <div class="relative">
-      <div class="relative text-center md:text-left mt-[100px] z-20">
-        <h3 class="font-semibold uppercase text-base md:text-lg lg:text-[22px]">
-          Business Advisor
-        </h3>
-        <h2
-          class="font-medium text-[40px] leading-[40px] md:text-[48px] md:leading-[54px] lg:text-[70px] lg:leading-[70px] mt-3 mb-8"
-        >
-          Grow <span class="text-primary">business</span> <br />with great
-          advice
-        </h2>
-        <p class="text-black/70 mb-10">
-          Dissuade ecstatic and properly saw entirely sir why laughter endeavor.
-          In on my jointure horrible margaret suitable he followed speedily.
-        </p>
-        <a
-          href="#"
-          class="font-bold py-4 px-14 rounded-full bg-primary text-white transition-all inline-block hover:bg-black"
-          >Get Started</a
-        >
-      </div>
-      <img
-        src="/images/anim-2.png"
-        class="absolute top-0 z-10 w-[200px] translate-x-[-50%]"
-        alt=""
-      />
-    </div>
-    <div class="flex justify-center thumb relative">
-      <img class="w-[80%]" src="/images/hero.png" alt="" />
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="/css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="fixed bg-white h-fit inset-0 w-full z-50">
       <div
-        class="absolute left-0 bottom-40 bg-white p-6 rounded-lg border items-center gap-4 hidden md:flex"
+        class="container py-5 flex items-center justify-between gap-5 flex-wrap"
       >
-        <div
-          class="bg-primary rounded-lg w-12 flex items-center justify-center text-2xl h-12"
-        >
-          <i class="fa-solid fa-chart-pie text-white"></i>
-        </div>
         <div>
-          <h3 class="font-semibold text-[30px]">86%</h3>
-          <p class="text-black/60">Business Growth</p>
+          <a href="/">
+            <img class="w-44" src="/images/logo.png" alt="logo" />
+          </a>
         </div>
-      </div>
-
-      <div
-        class="absolute right-0 bottom-[50%] bg-white p-6 rounded-lg border hidden md:flex items-center gap-4"
-      >
-        <div
-          class="bg-primary rounded-lg w-12 flex items-center justify-center text-2xl h-12"
-        >
-          <i class="fa-solid fa-rocket text-white"></i>
-        </div>
-        <div>
-          <h3 class="font-semibold text-[30px]">75%</h3>
-          <p class="text-black/60">Marketing</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- hero section end -->
-
-<!-- approach section start -->
-<section>
-  <div class="container">
-    <div class="flex justify-between gap-4">
-      <div class="hidden lg:block w-[30%]">
-        <img class="rounded-lg" src="/images/approach.jpg" alt="" />
-      </div>
-      <div
-        class="flex-1 bg-[#1F2B38] rounded-lg grid sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 sm:px-16 py-10"
-      >
-        <div
-          class="text-white flex flex-col gap-6 h-full sm:pr-10 sm:border-r border-gray-700"
-        >
-          <i class="fas fa-lightbulb text-white text-5xl"></i>
-          <h3 class="text-[22px] font-semibold">Strategy</h3>
-          <p class="text-white/80 leading-[25px] text-justify">
-            Identify how data and AI can make a difference for your organisation
-            and devise strategies that pave the way for successful
-            implementation and organisational transformation.
-          </p>
-        </div>
-        <div
-          class="text-white flex flex-col gap-6 h-full sm:pr-10 md:border-r border-gray-700"
-        >
-          <i class="fas fa-cogs text-white text-5xl"></i>
-          <h3 class="text-[22px] font-semibold">Engineering</h3>
-          <p class="text-white/80 leading-[25px]">
-            Build the foundational infrastructure and systems, ensuring the
-            seamless integration of data and AI throughout your organisation.
-          </p>
-        </div>
-        <div class="text-white flex flex-col gap-6 h-full">
-          <i class="fas fa-chart-line text-white text-5xl"></i>
-          <h3 class="text-[22px] font-semibold">Analytics</h3>
-          <p class="text-white/80 leading-[25px]">
-            Develop smart algorithms that extract valuable insights from
-            extensive data, enabling data-driven decision-making and predictive
-            capabilities.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-20">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/images/services/company-1.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-2.svg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-2.svg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-4.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-1.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/images/services/company-3.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- approach section end -->
-
-<!-- statistics section start -->
-<section class="py-24">
-  <div class="container">
-    <h2
-      class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-    >
-      Build something <br />great together
-    </h2>
-    <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
-      We are growing a team of the brightest minds with a diverse set of skills,
-      experiences, and backgrounds. Our collective goal is to make a real impact
-      for organisations while delivering an exceptional client experience.
-    </p>
-
-    <div class="mt-16 grid grid-cols-2 sm:grid-cols-4">
-      <div
-        class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
-      >
-        <h2
-          class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
-          id="client"
-        >
-          <span>K</span>
-        </h2>
-        <p class="font-medium text-[#666] mt-2">Clients around the world</p>
-      </div>
-      <div
-        class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
-      >
-        <h2
-          id="award"
-          class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
-        >
-          30+
-        </h2>
-        <p class="font-medium text-[#666] mt-2">Award Winning</p>
-      </div>
-      <div
-        class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
-      >
-        <h2
-          id="business"
-          class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
-        >
-          97%
-        </h2>
-        <p class="font-medium text-[#666] mt-2">Business Growth</p>
-      </div>
-      <div
-        class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
-      >
-        <h2
-          id="team"
-          class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
-        >
-          60+
-        </h2>
-        <p class="font-medium text-[#666] mt-2">Team Members</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- statistics section end -->
-
-<!--  section start -->
-<section class="py-24 bg-[#F7F7F7]">
-  <div class="container flex-col sm:flex-row flex gap-16 justify-between">
-    <div class="w-full sm:w-[35%]">
-      <h2
-        class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-      >
-        Working in Europe
-      </h2>
-      <p class="text-[#666666] mt-6">
-        With offices in Northern Europe and a highly diverse international team,
-        we cater to clients across Europe, enabling them to adopt data and AI in
-        a positive and responsible way.
-      </p>
-    </div>
-
-    <div class="w-full sm:flex-1 grid gap-y-5 md:grid-cols-3">
-      <div class="">
-        <h2 class="text-2xl font-medium">Amsterdam</h2>
-        <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
-        <p
-          class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
-        >
-          <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
-        </p>
-      </div>
-      <div class="">
-        <h2 class="text-2xl font-medium">Copenhagen</h2>
-        <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
-        <p
-          class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
-        >
-          <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
-        </p>
-      </div>
-      <div class="">
-        <h2 class="text-2xl font-medium">Stockholm</h2>
-        <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
-        <p
-          class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
-        >
-          <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- statistics section end -->
-
-<!-- cases section start -->
-<section class="py-24">
-  <div class="container">
-    <h2
-      class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-    >
-      Our Cases
-    </h2>
-    <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
-      Find inspiration, gain valuable insights, and discover effective
-      solutions.
-    </p>
-
-    <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+        <nav class="hidden lg:block">
+          <ul
+            class="flex items-center gap-7 text-lg font-medium text-[#232323]"
           >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
-            >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >Picked up a Brussels burger Sprouts with ham</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
-      </div>
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
-          >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
-            >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >This prefabrice passive house is highly sustainable</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
-      </div>
-      <div>
-        <div class="relative">
-          <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
-          <div
-            class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
-          >
-            <span class="inline-block border rounded-full px-4 py-1"
-              >Agriculture</span
-            >
-            <p class="text-[#666] font-medium">July 24, 2024</p>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
-          >Announcing if attachment resolution sentim.</a
-        >
-        <a
-          href="#"
-          class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
-          >Read more</a
-        >
-      </div>
-    </div>
-  </div>
-</section>
-<!-- cases section end -->
+            <li class="transition-all hover:text-primary">
+              <a href="/services">Services</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/cases">Cases</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/about">About Us</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-<!-- feedback section start -->
-<section class="py-24">
-  <div
-    class="container overflow-hidden rounded-lg bg-[#D8E7EF] pt-24 px-12 grid lg:grid-cols-2 gap-5"
-  >
-    <div class="hidden lg:flex justify-center items-end">
-      <img src="/images/feedback.png" class="h-fit w-[50%]" alt="" />
-    </div>
-    <div class="flex-1 flex pb-10">
-      <div class="hidden sm:block">
-        <div
-          class="w-16 h-14 bg-[#1F2B38] flex items-center justify-center text-white text-4xl"
-        >
-          "
-        </div>
-      </div>
-      <div class="flex-1 overflow-hidden">
-        <h2 class="ml-11 text-4xl font-medium">Awesome opportunities</h2>
-        <div class="slider-container">
-          <div class="slider">
-            <div
-              class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
-            >
-              <p class="text-xl leading-[36px] text-[#666]">
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam distinctio, soluta est alias repellat aliquam eaque
-                dolor error recusandae a! Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Fugit, facere! Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Fugit, facere!"
-              </p>
-              <div
-                class="mt-8 flex items-center justify-between flex-wrap gap-4"
-              >
-                <div>
-                  <h3 class="text-[22px] font-semibold">John Doe</h3>
-                  <span class="text-[15px] text-[#666] uppercase"
-                    >marketing manager</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
-            >
-              <p class="text-xl leading-[36px] text-[#666]">
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam distinctio, soluta est alias repellat aliquam eaque
-                dolor error recusandae a! Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Fugit, facere! Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Fugit, facere!"
-              </p>
-              <div
-                class="mt-8 flex items-center justify-between flex-wrap gap-4"
-              >
-                <div>
-                  <h3 class="text-[22px] font-semibold">John Doe</h3>
-                  <span class="text-[15px] text-[#666] uppercase"
-                    >marketing manage sdfr</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
-            >
-              <p class="text-xl leading-[36px] text-[#666]">
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam distinctio, soluta est alias repellat aliquam eaque
-                dolor error recusandae a! Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Fugit, facere! Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Fugit, facere!"
-              </p>
-              <div
-                class="mt-8 flex items-center justify-between flex-wrap gap-4"
-              >
-                <div>
-                  <h3 class="text-[22px] font-semibold">John Doe</h3>
-                  <span class="text-[15px] text-[#666] uppercase"
-                    >marketing manager</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
-            >
-              <p class="text-xl leading-[36px] text-[#666]">
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam distinctio, soluta est alias repellat aliquam eaque
-                dolor error recusandae a! Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Fugit, facere! Lorem, ipsum dolor
-                sit amet consectetur adipisicing elit. Fugit, facere!"
-              </p>
-              <div
-                class="mt-8 flex items-center justify-between flex-wrap gap-4"
-              >
-                <div>
-                  <h3 class="text-[22px] font-semibold">John Doe</h3>
-                  <span class="text-[15px] text-[#666] uppercase"
-                    >marketing manage sdfr</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- navigation -->
-          <div class="flex items-center gap-5 absolute right-0 bottom-3">
-            <div class="nav-button prev">
-              <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            <div class="nav-button next">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- feedback section end -->
-
-<!-- services section start -->
-<section class="pb-24">
-  <div class="container flex justify-between gap-16">
-    <div class="hidden md:block w-[40%]">
-      <img class="rounded-lg" src="/images/faq.jpg" alt="" />
-    </div>
-    <div class="flex-1 flex flex-col">
-      <div class="border-b service-item border-black">
-        <div
-          class="flex service-button items-center justify-between gap-4 flex-wrap cursor-pointer py-7"
-        >
-          <h3 class="uppercase text-[#04000b]">Strategy</h3>
-          <i class="fa-solid text-lg fa-plus"></i>
-        </div>
-        <div class="mb-7 service-content sm:grid-cols-2 gap-10">
-          <div>
-            <p class="text-[#666] text-lg">
-              We help you to get a grip on complexity. We create a clear data
-              infrastructure, automate processes and reduce costs. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Vero in mollitia
-              earum at laborum quod recusandae nesciunt amet perferendis
-              quisquam?
-            </p>
-            <a
-              href="#"
-              class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
-              ><i class="fa-solid fa-calendar-days"></i> Schedule a free
-              consult</a
-            >
-          </div>
-          <div>
-            <img src="/images/faq-2.jpg" class="rounded" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="border-b service-item border-black">
-        <div
-          class="flex items-center justify-between gap-4 flex-wrap cursor-pointer service-button py-7"
-        >
-          <h3 class="uppercase text-[#04000b]">Strategy</h3>
-          <i class="fa-solid text-lg fa-plus"></i>
-        </div>
-        <div class="mb-7 service-content hidden-content sm:grid-cols-2 gap-10">
-          <div>
-            <p class="text-[#666] text-lg">
-              We help you to get a grip on complexity. We create a clear data
-              infrastructure, automate processes and reduce costs. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Vero in mollitia
-              earum at laborum quod recusandae nesciunt amet perferendis
-              quisquam?
-            </p>
-            <a
-              href="#"
-              class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
-              ><i class="fa-solid fa-calendar-days"></i> Schedule a free
-              consult</a
-            >
-          </div>
-          <div>
-            <img src="/images/faq-2.jpg" class="rounded" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="border-b service-item border-black">
-        <div
-          class="flex items-center service-button justify-between gap-4 flex-wrap cursor-pointer py-7"
-        >
-          <h3 class="uppercase text-[#04000b]">Strategy</h3>
-          <i class="fa-solid text-lg fa-plus"></i>
-        </div>
-        <div
-          class="mb-7 service-content hidden-content overflow-hidden sm:grid-cols-2 gap-10"
-        >
-          <div>
-            <p class="text-[#666] text-lg">
-              We help you to get a grip on complexity. We create a clear data
-              infrastructure, automate processes and reduce costs. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Vero in mollitia
-              earum at laborum quod recusandae nesciunt amet perferendis
-              quisquam?
-            </p>
-            <a
-              href="#"
-              class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
-              ><i class="fa-solid fa-calendar-days"></i> Schedule a free
-              consult</a
-            >
-          </div>
-          <div>
-            <img src="/images/faq-2.jpg" class="rounded" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- services section end -->
-
-<!-- about section start -->
-<section class="py-24 bg-[#F7F7F7]">
-  <div class="container">
-    <h2
-      class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
-    >
-      About us
-    </h2>
-
-    <div class="mt-16 grid sm:grid-cols-2 gap-10">
-      <div>
-        <h2
-          class="font-semibold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[44px] lg:text-[40px] lg:leading-[50px]"
-        >
-          We specialise in bridging the gap between strategy, data science, and
-          AI to empower data-driven organizations, unlocking the true value of
-          data for real impact.
-        </h2>
-        <p class="mt-5 text-[#666] text-lg">
-          With reliable insights, these organizations operate efficiently and
-          confidently, anticipating change. Our collective approach fosters
-          teamwork, collaboration, and support, recognising the power of
-          collaboration for greater success. ADC – where it all adds up.
-        </p>
-        <div class="mt-5 flex flex-wrap items-center gap-3">
+        <div class="hidden lg:block">
           <a
-            href="#"
-            class="font-bold py-4 px-8 rounded-full bg-primary text-white transition-all hover:bg-black"
-            >Learn More</a
-          >
-          <a
-            href="#"
-            class="font-bold py-4 px-8 rounded-full bg-orange-400 text-white transition-all hover:bg-black flex items-center gap-2"
-            ><i class="fa-solid fa-calendar-days"></i> Schedule a free
-            consult</a
+            href="/schedule-consult"
+            class="font-bold py-4 px-8 rounded-md bg-primary text-white transition-all hover:bg-black"
+            >Get Consultant</a
           >
         </div>
-      </div>
-      <div>
-        <img src="/images/about.jpg" class="w-full rounded-lg" alt="" />
-      </div>
-    </div>
-  </div>
-</section>
-<!-- abou section end -->
 
-<%- include('partials/footer.ejs') %>
+        <div class="block lg:hidden">
+          <i class="fa-solid fa-bars cursor-pointer"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section start -->
+    <section
+      class="pt-[80px] sm:pt-[120px] md:pt-[200px] overflow-hidden min-h-[765px] banner-style-one-area"
+    >
+      <div class="shape-blury"></div>
+      <div class="container relative z-30 grid md:grid-cols-2 gap-10">
+        <div class="relative">
+          <div class="relative text-center md:text-left mt-[100px] z-20">
+            <h3
+              class="font-semibold uppercase text-base md:text-lg lg:text-[22px]"
+            >
+              Business Advisor
+            </h3>
+            <h2
+              class="font-medium text-[40px] leading-[40px] md:text-[48px] md:leading-[54px] lg:text-[70px] lg:leading-[70px] mt-3 mb-8"
+            >
+              Grow <span class="text-primary">business</span> <br />with great
+              advice
+            </h2>
+            <p class="text-black/70 mb-10">
+              Dissuade ecstatic and properly saw entirely sir why laughter
+              endeavor. In on my jointure horrible margaret suitable he followed
+              speedily.
+            </p>
+            <a
+              href="#"
+              class="font-bold py-4 px-14 rounded-full bg-primary text-white transition-all inline-block hover:bg-black"
+              >Get Started</a
+            >
+          </div>
+          <img
+            src="/images/anim-2.png"
+            class="absolute top-0 z-10 w-[200px] translate-x-[-50%]"
+            alt=""
+          />
+        </div>
+        <div class="flex justify-center thumb relative">
+          <img class="w-[80%]" src="/images/hero.png" alt="" />
+
+          <div
+            class="absolute left-0 bottom-40 bg-white p-6 rounded-lg border items-center gap-4 hidden md:flex"
+          >
+            <div
+              class="bg-primary rounded-lg w-12 flex items-center justify-center text-2xl h-12"
+            >
+              <i class="fa-solid fa-chart-pie text-white"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[30px]">86%</h3>
+              <p class="text-black/60">Business Growth</p>
+            </div>
+          </div>
+
+          <div
+            class="absolute right-0 bottom-[50%] bg-white p-6 rounded-lg border hidden md:flex items-center gap-4"
+          >
+            <div
+              class="bg-primary rounded-lg w-12 flex items-center justify-center text-2xl h-12"
+            >
+              <i class="fa-solid fa-rocket text-white"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[30px]">75%</h3>
+              <p class="text-black/60">Marketing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- approach section start -->
+    <section>
+      <div class="container">
+        <div class="flex justify-between gap-4">
+          <div class="hidden lg:block w-[30%]">
+            <img class="rounded-lg" src="/images/approach.jpg" alt="" />
+          </div>
+          <div
+            class="flex-1 bg-[#1F2B38] rounded-lg grid sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 sm:px-16 py-10"
+          >
+            <div
+              class="text-white flex flex-col gap-6 h-full sm:pr-10 sm:border-r border-gray-700"
+            >
+              <i class="fas fa-lightbulb text-white text-5xl"></i>
+              <h3 class="text-[22px] font-semibold">Strategy</h3>
+              <p class="text-white/80 leading-[25px] text-justify">
+                Identify how data and AI can make a difference for your
+                organisation and devise strategies that pave the way for
+                successful implementation and organisational transformation.
+              </p>
+            </div>
+            <div
+              class="text-white flex flex-col gap-6 h-full sm:pr-10 md:border-r border-gray-700"
+            >
+              <i class="fas fa-cogs text-white text-5xl"></i>
+              <h3 class="text-[22px] font-semibold">Engineering</h3>
+              <p class="text-white/80 leading-[25px]">
+                Build the foundational infrastructure and systems, ensuring the
+                seamless integration of data and AI throughout your
+                organisation.
+              </p>
+            </div>
+            <div class="text-white flex flex-col gap-6 h-full">
+              <i class="fas fa-chart-line text-white text-5xl"></i>
+              <h3 class="text-[22px] font-semibold">Analytics</h3>
+              <p class="text-white/80 leading-[25px]">
+                Develop smart algorithms that extract valuable insights from
+                extensive data, enabling data-driven decision-making and
+                predictive capabilities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-4.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- approach section end -->
+
+    <!-- statistics section start -->
+    <section class="py-24">
+      <div class="container">
+        <h2
+          class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+        >
+          Build something <br />great together
+        </h2>
+        <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
+          We are growing a team of the brightest minds with a diverse set of
+          skills, experiences, and backgrounds. Our collective goal is to make a
+          real impact for organisations while delivering an exceptional client
+          experience.
+        </p>
+
+        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4">
+          <div
+            class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
+          >
+            <h2
+              class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
+              id="client"
+            >
+              <span>K</span>
+            </h2>
+            <p class="font-medium text-[#666] mt-2">Clients around the world</p>
+          </div>
+          <div
+            class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
+          >
+            <h2
+              id="award"
+              class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
+            >
+              30+
+            </h2>
+            <p class="font-medium text-[#666] mt-2">Award Winning</p>
+          </div>
+          <div
+            class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
+          >
+            <h2
+              id="business"
+              class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
+            >
+              97%
+            </h2>
+            <p class="font-medium text-[#666] mt-2">Business Growth</p>
+          </div>
+          <div
+            class="text-center py-10 border px-4 border-b-0 rounded-tl-[25px] rounded-tr-[25px]"
+          >
+            <h2
+              id="team"
+              class="text-[40px] sm:text-[50px] md:text-[70px] leading-[70px] font-medium"
+            >
+              60+
+            </h2>
+            <p class="font-medium text-[#666] mt-2">Team Members</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- statistics section end -->
+
+    <!--  section start -->
+    <section class="py-24 bg-[#F7F7F7]">
+      <div class="container flex-col sm:flex-row flex gap-16 justify-between">
+        <div class="w-full sm:w-[35%]">
+          <h2
+            class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+          >
+            Working in Europe
+          </h2>
+          <p class="text-[#666666] mt-6">
+            With offices in Northern Europe and a highly diverse international
+            team, we cater to clients across Europe, enabling them to adopt data
+            and AI in a positive and responsible way.
+          </p>
+        </div>
+
+        <div class="w-full sm:flex-1 grid gap-y-5 md:grid-cols-3">
+          <div class="">
+            <h2 class="text-2xl font-medium">Amsterdam</h2>
+            <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
+            <p
+              class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
+            >
+              <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
+            </p>
+          </div>
+          <div class="">
+            <h2 class="text-2xl font-medium">Copenhagen</h2>
+            <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
+            <p
+              class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
+            >
+              <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
+            </p>
+          </div>
+          <div class="">
+            <h2 class="text-2xl font-medium">Stockholm</h2>
+            <p class="text-[#666] mt-2">Our friendly team is here to help.</p>
+            <p
+              class="mt-2 cursor-pointer transition-all hover:text-primary flex items-center gap-2"
+            >
+              <i class="fa-solid fa-envelope"></i> info@adc-consulting.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- statistics section end -->
+
+    <!-- cases section start -->
+    <section class="py-24">
+      <div class="container">
+        <h2
+          class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+        >
+          Our Cases
+        </h2>
+        <p class="text-[#666666] mt-6 text-center w-[60%] mx-auto">
+          Find inspiration, gain valuable insights, and discover effective
+          solutions.
+        </p>
+
+        <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
+                >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >Picked up a Brussels burger Sprouts with ham</a
+            >
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
+            >
+          </div>
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
+                >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >This prefabrice passive house is highly sustainable</a
+            >
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
+            >
+          </div>
+          <div>
+            <div class="relative">
+              <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
+              <div
+                class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
+              >
+                <span class="inline-block border rounded-full px-4 py-1"
+                  >Agriculture</span
+                >
+                <p class="text-[#666] font-medium">July 24, 2024</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+              >Announcing if attachment resolution sentim.</a
+            >
+            <a
+              href="#"
+              class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- cases section end -->
+
+    <!-- feedback section start -->
+    <section class="py-24">
+      <div
+        class="container overflow-hidden rounded-lg bg-[#D8E7EF] pt-24 px-12 grid lg:grid-cols-2 gap-5"
+      >
+        <div class="hidden lg:flex justify-center items-end">
+          <img src="/images/feedback.png" class="h-fit w-[50%]" alt="" />
+        </div>
+        <div class="flex-1 flex pb-10">
+          <div class="hidden sm:block">
+            <div
+              class="w-16 h-14 bg-[#1F2B38] flex items-center justify-center text-white text-4xl"
+            >
+              "
+            </div>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <h2 class="ml-11 text-4xl font-medium">Awesome opportunities</h2>
+            <div class="slider-container">
+              <div class="slider">
+                <div
+                  class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
+                >
+                  <p class="text-xl leading-[36px] text-[#666]">
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quisquam distinctio, soluta est alias repellat aliquam eaque
+                    dolor error recusandae a! Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                  </p>
+                  <div
+                    class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                  >
+                    <div>
+                      <h3 class="text-[22px] font-semibold">John Doe</h3>
+                      <span class="text-[15px] text-[#666] uppercase"
+                        >marketing manager</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
+                >
+                  <p class="text-xl leading-[36px] text-[#666]">
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quisquam distinctio, soluta est alias repellat aliquam eaque
+                    dolor error recusandae a! Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                  </p>
+                  <div
+                    class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                  >
+                    <div>
+                      <h3 class="text-[22px] font-semibold">John Doe</h3>
+                      <span class="text-[15px] text-[#666] uppercase"
+                        >marketing manage sdfr</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
+                >
+                  <p class="text-xl leading-[36px] text-[#666]">
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quisquam distinctio, soluta est alias repellat aliquam eaque
+                    dolor error recusandae a! Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                  </p>
+                  <div
+                    class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                  >
+                    <div>
+                      <h3 class="text-[22px] font-semibold">John Doe</h3>
+                      <span class="text-[15px] text-[#666] uppercase"
+                        >marketing manager</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="slide mt-4 pl-5 sm:pl-14 pt-9 border-t border-l border-gray-700/15"
+                >
+                  <p class="text-xl leading-[36px] text-[#666]">
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quisquam distinctio, soluta est alias repellat aliquam eaque
+                    dolor error recusandae a! Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Fugit, facere! Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Fugit, facere!"
+                  </p>
+                  <div
+                    class="mt-8 flex items-center justify-between flex-wrap gap-4"
+                  >
+                    <div>
+                      <h3 class="text-[22px] font-semibold">John Doe</h3>
+                      <span class="text-[15px] text-[#666] uppercase"
+                        >marketing manage sdfr</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- navigation -->
+              <div class="flex items-center gap-5 absolute right-0 bottom-3">
+                <div class="nav-button prev">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="nav-button next">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feedback section end -->
+
+    <!-- services section start -->
+    <section class="pb-24">
+      <div class="container flex justify-between gap-16">
+        <div class="hidden md:block w-[40%]">
+          <img class="rounded-lg" src="/images/faq.jpg" alt="" />
+        </div>
+        <div class="flex-1 flex flex-col">
+          <div class="border-b service-item border-black">
+            <div
+              class="flex service-button items-center justify-between gap-4 flex-wrap cursor-pointer py-7"
+            >
+              <h3 class="uppercase text-[#04000b]">Strategy</h3>
+              <i class="fa-solid text-lg fa-plus"></i>
+            </div>
+            <div class="mb-7 service-content sm:grid-cols-2 gap-10">
+              <div>
+                <p class="text-[#666] text-lg">
+                  We help you to get a grip on complexity. We create a clear
+                  data infrastructure, automate processes and reduce costs.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                  in mollitia earum at laborum quod recusandae nesciunt amet
+                  perferendis quisquam?
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
+                  ><i class="fa-solid fa-calendar-days"></i> Schedule a free
+                  consult</a
+                >
+              </div>
+              <div>
+                <img src="/images/faq-2.jpg" class="rounded" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="border-b service-item border-black">
+            <div
+              class="flex items-center justify-between gap-4 flex-wrap cursor-pointer service-button py-7"
+            >
+              <h3 class="uppercase text-[#04000b]">Strategy</h3>
+              <i class="fa-solid text-lg fa-plus"></i>
+            </div>
+            <div
+              class="mb-7 service-content hidden-content sm:grid-cols-2 gap-10"
+            >
+              <div>
+                <p class="text-[#666] text-lg">
+                  We help you to get a grip on complexity. We create a clear
+                  data infrastructure, automate processes and reduce costs.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                  in mollitia earum at laborum quod recusandae nesciunt amet
+                  perferendis quisquam?
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
+                  ><i class="fa-solid fa-calendar-days"></i> Schedule a free
+                  consult</a
+                >
+              </div>
+              <div>
+                <img src="/images/faq-2.jpg" class="rounded" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="border-b service-item border-black">
+            <div
+              class="flex items-center service-button justify-between gap-4 flex-wrap cursor-pointer py-7"
+            >
+              <h3 class="uppercase text-[#04000b]">Strategy</h3>
+              <i class="fa-solid text-lg fa-plus"></i>
+            </div>
+            <div
+              class="mb-7 service-content hidden-content overflow-hidden sm:grid-cols-2 gap-10"
+            >
+              <div>
+                <p class="text-[#666] text-lg">
+                  We help you to get a grip on complexity. We create a clear
+                  data infrastructure, automate processes and reduce costs.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                  in mollitia earum at laborum quod recusandae nesciunt amet
+                  perferendis quisquam?
+                </p>
+                <a
+                  href="#"
+                  class="flex items-center gap-2 mt-5 transition-all hover:text-primary"
+                  ><i class="fa-solid fa-calendar-days"></i> Schedule a free
+                  consult</a
+                >
+              </div>
+              <div>
+                <img src="/images/faq-2.jpg" class="rounded" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services section end -->
+
+    <!-- about section start -->
+    <section class="py-24 bg-[#F7F7F7]">
+      <div class="container">
+        <h2
+          class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
+        >
+          About us
+        </h2>
+
+        <div class="mt-16 grid sm:grid-cols-2 gap-10">
+          <div>
+            <h2
+              class="font-semibold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[44px] lg:text-[40px] lg:leading-[50px]"
+            >
+              We specialise in bridging the gap between strategy, data science,
+              and AI to empower data-driven organizations, unlocking the true
+              value of data for real impact.
+            </h2>
+            <p class="mt-5 text-[#666] text-lg">
+              With reliable insights, these organizations operate efficiently
+              and confidently, anticipating change. Our collective approach
+              fosters teamwork, collaboration, and support, recognising the
+              power of collaboration for greater success. ADC – where it all
+              adds up.
+            </p>
+            <div class="mt-5 flex flex-wrap items-center gap-3">
+              <a
+                href="#"
+                class="font-bold py-4 px-8 rounded-full bg-primary text-white transition-all hover:bg-black"
+                >Learn More</a
+              >
+              <a
+                href="#"
+                class="font-bold py-4 px-8 rounded-full bg-orange-400 text-white transition-all hover:bg-black flex items-center gap-2"
+                ><i class="fa-solid fa-calendar-days"></i> Schedule a free
+                consult</a
+              >
+            </div>
+          </div>
+          <div>
+            <img src="/images/about.jpg" class="w-full rounded-lg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- abou section end -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Address Section -->
+          <div class="space-y-4">
+            <div>
+              <ul class="space-y-4">
+                <li>
+                  <p>Want to connect?</p>
+                  <h4>
+                    <a
+                      href="mailto:info@validthemes.com"
+                      class="text-primary hover:underline"
+                      >info@validthemes.com</a
+                    >
+                  </h4>
+                </li>
+                <li>
+                  <p>Call us anytime</p>
+                  <h4>
+                    <a
+                      href="tel:+4733378901"
+                      class="text-primary hover:underline"
+                      >+4733378901</a
+                    >
+                  </h4>
+                </li>
+                <li>
+                  <p>Our Location</p>
+                  <h4>175 10h Street, Office 375 Berlin, Devolina 21562</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Quick Links Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="about-us.html" class="text-primary hover:underline"
+                  >Company Profile</a
+                >
+              </li>
+              <li>
+                <a href="contact-us.html" class="text-primary hover:underline"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="about-us.html" class="text-primary hover:underline"
+                  >Career</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html" class="text-primary hover:underline"
+                  >Plans & Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-with-sidebar.html"
+                  class="text-primary hover:underline"
+                  >News & Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Our Services Section -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Manage investment</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Email Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Growth Hacking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Lead Generation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services-details.html"
+                  class="text-primary hover:underline"
+                  >Offline SEO</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Newsletter Section -->
+          <div class="space-y-4">
+            <p>
+              Join our subscribers list to get the latest <br />
+              news and special offers.
+            </p>
+            <form action="#" class="flex flex-col space-y-2">
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="p-2 border border-gray-300 rounded"
+                name="email"
+              />
+              <button
+                type="submit"
+                class="bg-primary text-white py-2 px-4 rounded hover:bg-black flex items-center justify-center"
+              >
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </form>
+            <fieldset class="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                class="form-checkbox"
+              />
+              <label for="privacy" class="text-sm"
+                >I agree to the Privacy Policy</label
+              >
+            </fieldset>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-600 mt-8 pt-4">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p>
+              © Copyright 2024. All Rights Reserved by
+              <a href="#" class="text-primary hover:underline">validthemes</a>
+            </p>
+            <ul class="flex space-x-4 mt-4 md:mt-0">
+              <li>
+                <a href="#" class="text-primary hover:underline">Terms</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary hover:underline">Privacy</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary hover:underline">Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/45f30cfcd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
