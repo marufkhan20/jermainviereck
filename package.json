@@ -7,7 +7,8 @@
     "build:css": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --minify",
     "tailwind:watch": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --watch",
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
