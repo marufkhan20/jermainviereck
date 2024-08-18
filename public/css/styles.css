@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Style+Script&family=Work+Sans:ital,wght@0,100,400..900;1,100..900&display=swap");
+
+/* public/css/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+/* Text Color Animation: Creates a gradient text color animation that smoothly transitions through different colors. Ideal for headings or any text you want to highlight with dynamic color changes. */
+.text-color {
+  color: #000;
+  background-image: linear-gradient(
+    to right,
+    #60a5fa,
+    #fb923c,
+    #7e22ce,
+    #60a5fa
+  );
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: TextColor 5s linear infinite;
+}
+@keyframes TextColor {
+  to {
+    background-position: -200% center;
+  }
+}
+
+,
+.banner-style-one-area {
+  position: relative;
+  z-index: 1;
+  background-size: 120%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 100%;
+}
+
+.shape-blury {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 600px;
+  width: 600px;
+  background: red;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.1;
+}
+
+.thumb {
+  height: 100% !important;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-style-one .thumb img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.thumb::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: "";
+  height: 500px;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #246bfd;
+  z-index: -1;
+  margin-left: 20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.thumb::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: "";
+  height: 500px;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  border: 100px solid #246bfd;
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.04;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.slide {
+  flex: 0 0 100%; /* Ensure each slide takes full width */
+  box-sizing: border-box;
+}
+.nav-button {
+  cursor: pointer;
+  width: 36px; /* Adjusted for better visibility */
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.nav-button:hover {
+  background: #007bff; /* Adjust hover color as needed */
+  color: white;
+}
+
+/* Default container styling */
+.container-custom {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  /* sm */
+  .container-custom {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .container-custom {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .container-custom {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl */
+  .container-custom {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  /* 2xl */
+  .container-custom {
+    max-width: 1536px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.service-content {
+  display: grid;
+}
+
+.hidden-content {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+.visible-content {
+  max-height: 1000px; /* Adjust to the expected height */
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}

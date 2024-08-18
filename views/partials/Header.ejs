@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="/css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="fixed bg-white h-fit inset-0 w-full z-50">
+      <div
+        class="container py-5 flex items-center justify-between gap-5 flex-wrap"
+      >
+        <div>
+          <a href="/">
+            <img class="w-44" src="/images/logo.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="hidden lg:block">
+          <ul
+            class="flex items-center gap-7 text-lg font-medium text-[#232323]"
+          >
+            <li class="transition-all hover:text-primary">
+              <a href="/services">Services</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/cases">Cases</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/about">About Us</a>
+            </li>
+            <li class="transition-all hover:text-primary">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="hidden lg:block">
+          <a
+            href="/schedule-consult"
+            class="font-bold py-4 px-8 rounded-md bg-primary text-white transition-all hover:bg-black"
+            >Get Consultant</a
+          >
+        </div>
+
+        <div class="block lg:hidden">
+          <i class="fa-solid fa-bars cursor-pointer"></i>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
