@@ -179,3 +179,22 @@ document.querySelectorAll(".service-button").forEach((button) => {
     }
   });
 });
+
+document.getElementById("acceptBtn").addEventListener("click", function () {
+  document.getElementById("cookieConsent").style.display = "none";
+  // Store user consent in local storage or handle consent logic here
+});
+
+document.getElementById("rejectBtn").addEventListener("click", function () {
+  document.getElementById("cookieConsent").style.display = "none";
+  // Handle reject logic here
+});
+
+document.getElementById("customizeBtn").addEventListener("click", function () {
+  alert("Customize your cookie settings.");
+  // Show customization options (not implemented in this example)
+});
+
+document.getElementById("closeBtn").addEventListener("click", function () {
+  document.getElementById("cookieConsent").style.display = "none";
+});

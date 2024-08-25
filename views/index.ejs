@@ -11,6 +11,81 @@
     <link href="/css/output.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- cookies -->
+    <div
+      id="cookieConsent"
+      class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50"
+    >
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-semibold text-gray-800">
+            Your Privacy Matters
+          </h2>
+          <button
+            id="closeBtn"
+            class="text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="text-gray-600 mb-4">
+          We use cookies to ensure that we give you the best experience on our
+          website. These cookies help us to personalize content and ads, provide
+          social media features, and analyze our traffic. You can choose to
+          accept all cookies or customize your settings to manage your
+          preferences.
+        </p>
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-800">
+            What cookies do we use?
+          </h3>
+          <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+            <li>
+              <strong>Essential Cookies:</strong> These cookies are necessary
+              for the website to function and cannot be switched off in our
+              systems.
+            </li>
+            <li>
+              <strong>Performance Cookies:</strong> These cookies allow us to
+              count visits and traffic sources so we can measure and improve the
+              performance of our site.
+            </li>
+            <li>
+              <strong>Functional Cookies:</strong> These cookies enable the
+              website to provide enhanced functionality and personalization.
+            </li>
+            <li>
+              <strong>Targeting Cookies:</strong> These cookies may be set
+              through our site by our advertising partners to build a profile of
+              your interests and show you relevant adverts.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mt-4 flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0 sm:space-x-4"
+        >
+          <button
+            id="customizeBtn"
+            class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+          >
+            Customize Settings
+          </button>
+          <button
+            id="rejectBtn"
+            class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100"
+          >
+            Reject All
+          </button>
+          <button
+            id="acceptBtn"
+            class="px-4 py-2 bg-[#ffb04b] text-white rounded-md hover:bg-opacity-90"
+          >
+            Accept All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
     <header class="fixed bg-white h-fit inset-0 w-full z-50">
       <div
         class="container py-5 flex items-center justify-between gap-5 flex-wrap"
@@ -55,10 +130,12 @@
 
     <!-- hero section start -->
     <section
-      class="pt-[80px] sm:pt-[120px] md:pt-[200px] overflow-hidden min-h-[765px] banner-style-one-area"
+      class="pt-[80px] pb-20 sm:pt-[100px] overflow-hidden min-h-[765px] banner-style-one-area"
     >
       <div class="shape-blury"></div>
-      <div class="container relative z-30 grid md:grid-cols-2 gap-10">
+      <div
+        class="container items-center relative z-30 grid md:grid-cols-2 gap-10"
+      >
         <div class="relative">
           <div class="relative text-center md:text-left mt-[100px] z-20">
             <h3
@@ -89,7 +166,8 @@
             alt=""
           />
         </div>
-        <div class="flex justify-center thumb relative">
+        <!-- <div class="flex justify-center thumb relative">
+
           <img class="w-[80%]" src="/images/hero.png" alt="" />
 
           <div
@@ -119,7 +197,9 @@
               <p class="text-black/60">Marketing</p>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <img src="/images/hero.gif" alt="hero image" />
       </div>
     </section>
     <!-- hero section end -->
@@ -169,27 +249,51 @@
         </div>
 
         <div class="mt-20">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+          <div class="overflow-x-hidden">
+            <div
+              class="slide flex space-x-10 flex-wrap-nowrap items-center logos"
+            >
+              <div class="shrink-0">
                 <img src="/images/services/company-1.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-2.svg" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-3.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-2.svg" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-4.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-1.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+
+              <div class="shrink-0">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-4.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="shrink-0">
                 <img src="/images/services/company-3.png" alt="" />
               </div>
             </div>
