@@ -904,6 +904,15 @@ video {
   width: 100vw;
 }
 
+.\!w-fit{
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.\!w-full{
+  width: 100% !important;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -2221,6 +2230,10 @@ body {
 
   .lg\:w-\[50\%\]{
     width: 50%;
+  }
+
+  .lg\:flex-1{
+    flex: 1 1 0%;
   }
 
   .lg\:grid-cols-2{
