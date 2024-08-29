@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 /* Text Color Animation: Creates a gradient text color animation that smoothly transitions through different colors. Ideal for headings or any text you want to highlight with dynamic color changes. */
 .text-color {
@@ -54,7 +55,7 @@ body {
   transform: translateY(-50%);
   height: 600px;
   width: 600px;
-  background: red;
+  background: #ffb04b;
   z-index: -1;
   border-radius: 50%;
   filter: blur(80px);
@@ -223,4 +224,17 @@ body {
     padding-left: 50px;
     padding-right: 50px;
   }
+}
+
+.popup {
+  display: none;
+}
+
+.services:hover > .service-item {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav.active {
+  left: 0 !important;
 }

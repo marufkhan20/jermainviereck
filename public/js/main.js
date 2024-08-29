@@ -180,11 +180,6 @@ document.querySelectorAll(".service-button").forEach((button) => {
   });
 });
 
-document.getElementById("acceptBtn").addEventListener("click", function () {
-  document.getElementById("cookieConsent").style.display = "none";
-  // Store user consent in local storage or handle consent logic here
-});
-
 document.getElementById("rejectBtn").addEventListener("click", function () {
   document.getElementById("cookieConsent").style.display = "none";
   // Handle reject logic here
@@ -197,4 +192,25 @@ document.getElementById("customizeBtn").addEventListener("click", function () {
 
 document.getElementById("closeBtn").addEventListener("click", function () {
   document.getElementById("cookieConsent").style.display = "none";
+});
+
+// Check if cookies consent has already been given
+if (!localStorage.getItem("cookies-consent")) {
+  document.getElementById("cookies-popup").style.display = "flex";
+}
+
+// Handle the accept button click
+document
+  .getElementById("accept-cookies")
+  .addEventListener("click", function () {
+    localStorage.setItem("cookies-consent", "true");
+    document.getElementById("cookies-popup").style.display = "none";
+  });
+
+// toggle mobile nav
+const toggleMobileNavBtn = document.getElementById("toggle-mobile-nav");
+const mobileNav = document.getElementById("mobile-nav");
+
+toggleMobileNavBtn.addEventListener("click", () => {
+  mobileNav.classList.toggle("active");
 });
