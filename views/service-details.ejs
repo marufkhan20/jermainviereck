@@ -116,7 +116,7 @@
                   class="container grid grid-cols-3 gap-10 bg-white p-7 border shadow rounded"
                 >
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/strategy">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -127,7 +127,7 @@
                           <h3
                             class="text-base mt-4 transition-all hover:text-primary"
                           >
-                            Financial Services
+                            Strategy
                           </h3>
                           <p class="text-xs mt-2 hover:text-black">
                             We accelerate the positive and responsible adoption
@@ -139,7 +139,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/engineering">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -162,7 +162,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/analytics">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -221,24 +221,31 @@
         <ul
           class="flex flex-col w-full justify-center pt-10 items-center gap-7 text-lg font-medium text-[#232323]"
         >
-          <li class="transition-all services-mobile">
+          <li class="transition-all" id="services-mobile">
             <div
-              class="flex items-center gap-2 transition-all hover:text-primary"
+              class="flex items-center gap-2 transition-all hover:text-primary cursor-pointer text-center justify-center"
+              id="service-mobile-btn"
             >
-              <a href="/services">Services</a>
+              <span>Services</span>
               <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="ml-5">
+            <ul
+              class="ml-5 !hidden flex-col gap-7 items-center justify-center pt-6"
+              id="service-mobile-item"
+            >
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Financial Services</a>
+                <a href="/services">All Services</a>
               </li>
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Engineering</a>
+                <a href="/services/strategy">Strategy</a>
               </li>
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Analytics</a>
+                <a href="/services/engineering">Engineering</a>
               </li>
-            </div>
+              <li class="transition-all hover:text-primary">
+                <a href="/services/analytics">Analytics</a>
+              </li>
+            </ul>
           </li>
           <li class="transition-all hover:text-primary">
             <a href="/cases">Cases</a>
@@ -262,13 +269,12 @@
         <div class="container pb-20 flex flex-col justify-end min-h-screen">
           <span
             class="inline-block px-4 py-1 rounded-full border border-white text-white w-fit"
-            >• Strategy</span
+            >• <%- service?.name %></span
           >
           <h2
             class="font-normal mt-2 text-white leading-[50px] text-[45px] md:leading-[60px] lg:text-[60px] my-5 lg:leading-[84px]"
           >
-            Create positive impact with <br />ADC's expertise in developing<br />
-            strategies
+            <%- service?.title %>
           </h2>
           <div>
             <a
@@ -283,211 +289,11 @@
     <!-- hero section end -->
 
     <!-- about section start -->
-    <section class="py-24 bg-white">
-      <div class="container">
-        <div class="grid sm:grid-cols-2 gap-10">
-          <div>
-            <img
-              src="/images/services/service-details-about.jpg"
-              class="w-full rounded-lg"
-              alt=""
-            />
-          </div>
-          <div>
-            <h2 class="font-normal text-[30px] leading-[50px]">
-              What is ADC's Strategy Competence Centre?
-            </h2>
-            <p class="mt-5 text-[#666] text-lg">
-              We drive the positive and responsible adoption of data and AI by
-              identifying how these technologies can transform your
-              organisation. Our strategic focus involves devising tailored
-              strategies that pave the way for successful implementation and
-              organisational transformation.
-              <br />
-              <br />
-              ADC’s approach enforces alignment between data fundamentals and
-              organisational context, applications, and strategy. Our services
-              extend to strategic planning, including workshops, design sprints,
-              and case assessments, to implement transformative strategies.
-              <br />
-              <br />
-              Connect with us to discuss the possibilities and start your
-              data-driven journey towards maximising the impact of data and AI
-              through a robust strategy.
-            </p>
-            <div class="mt-5 flex items-center gap-3">
-              <a
-                href="#"
-                class="font-bold py-4 px-8 rounded-full bg-primary text-white transition-all hover:bg-black"
-                >Let's Talk</a
-              >
-              <a
-                href="#"
-                class="font-bold py-4 px-8 rounded-full bg-[#EDEAE7] text-black transition-all hover:bg-black hover:text-white flex items-center gap-2"
-                ><i class="fa-solid fa-calendar-days"></i> Schedule a meeting</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-10">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="/images/services/company-1.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-2.svg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-3.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-2.svg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-4.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-1.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="/images/services/company-3.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-28">
-          <h2 class="text-4xl">
-            We provide a range of services to help organisations harness the
-            power of data and AI in their strategies:
-          </h2>
-
-          <div class="mt-16 flex flex-col border-t border-black border-dashed">
-            <div
-              class="flex-col md:flex-row pb-5 pt-10 border-b border-dashed border-black flex gap-5"
-            >
-              <div class="w-full md:w-[30%] flex flex-col justify-between">
-                <h2
-                  class="text-[22px] sm:text-[26px] md:text-[30px] font-semibold"
-                >
-                  Intelligence
-                </h2>
-                <p class="text-[20px]">
-                  We help you to make informed decisions and drive success with
-                  a clear strategy and smart insights.
-                </p>
-              </div>
-              <div class="flex-1 flex-col sm:flex-row flex gap-5 items-end">
-                <div class="w-full sm:w-[60%]">
-                  <video loop autoplay muted>
-                    <source
-                      src="https://adc-consulting.com/wp-content/uploads/2023/08/ADC-Intellicence-wide.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="flex-1">
-                  <img src="/images/services/1.jpg" class="w-full" alt="" />
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex-col md:flex-row pb-5 pt-10 border-b border-dashed border-black flex gap-5"
-            >
-              <div class="w-full md:w-[30%] flex flex-col justify-between">
-                <h2
-                  class="text-[22px] sm:text-[26px] md:text-[30px] font-semibold"
-                >
-                  Efficiency
-                </h2>
-                <p class="text-[20px]">
-                  We help you to get a grip on complexity. We create a clear
-                  data infrastructure, automate processes and reduce costs.
-                </p>
-              </div>
-              <div class="flex-1 flex-col sm:flex-row flex gap-5 items-end">
-                <div class="w-full sm:w-[60%]">
-                  <video loop autoplay muted>
-                    <source
-                      src="https://adc-consulting.com/wp-content/uploads/2023/08/ADC-Efficiency-wide.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="flex-1">
-                  <img src="/images/services/2.jpg" class="w-full" alt="" />
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex-col md:flex-row pb-5 pt-10 border-b border-dashed border-black flex gap-5"
-            >
-              <div class="w-full md:w-[30%] flex flex-col justify-between">
-                <h2
-                  class="text-[22px] sm:text-[26px] md:text-[30px] font-semibold"
-                >
-                  Compliance
-                </h2>
-                <p class="text-[20px]">
-                  We unlock your data to show the regulator that your
-                  organisation manages risks and is compliant to all
-                  regulations.
-                </p>
-              </div>
-              <div class="flex-1 flex-col sm:flex-row flex gap-5 items-end">
-                <div class="w-full sm:w-[60%]">
-                  <video loop autoplay muted>
-                    <source
-                      src="https://adc-consulting.com/wp-content/uploads/2023/08/ADC-Compliance-wide.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="flex-1">
-                  <img src="/images/services/3.webp" class="w-full" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="flex-col md:flex-row pt-10 flex gap-5">
-              <div class="w-full md:w-[30%] flex flex-col justify-between">
-                <h2
-                  class="text-[22px] sm:text-[26px] md:text-[30px] font-semibold"
-                >
-                  Innovation
-                </h2>
-                <p class="text-[20px]">
-                  We help you discover new ways in which your data can generate
-                  value for your organisation.
-                </p>
-              </div>
-              <div class="flex-1 flex-col sm:flex-row flex gap-5 items-end">
-                <div class="w-full sm:w-[60%]">
-                  <video loop autoplay muted>
-                    <source
-                      src="https://adc-consulting.com/wp-content/uploads/2023/08/ADC-Innovation-wide.mp4"
-                      type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="flex-1">
-                  <img src="/images/services/4.jpg" class="w-full" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div%- service?.details %>
     <!-- about section end -->
 
     <!-- cases section start -->
-    <section class="py-24 bg-[#F7F7F7]">
+    <section class="py-24 bg-[#F7F7F7] cases">
       <div class="container">
         <h2
           class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
@@ -502,7 +308,13 @@
         <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/1.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -525,7 +337,13 @@
           </div>
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/2.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -548,7 +366,13 @@
           </div>
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/3.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -586,11 +410,13 @@
         <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div>
             <div class="relative">
+              <div class="rounded-lg overflow-hidden">
               <img
-                class="rounded-lg w-full"
+                class="rounded-lg w-full transition-all hover:scale-110"
                 src="/images/services/new-item-1.jpg"
                 alt=""
               />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -613,11 +439,13 @@
           </div>
           <div>
             <div class="relative">
+              <div class="rounded-lg overflow-hidden">
               <img
-                class="rounded-lg w-full"
+                class="rounded-lg w-full transition-all hover:scale-110"
                 src="/images/services/new-item-2.jpg"
                 alt=""
               />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -640,11 +468,13 @@
           </div>
           <div>
             <div class="relative">
+              <div class="rounded-lg overflow-hidden">
               <img
-                class="rounded-lg w-full"
+                class="rounded-lg w-full transition-all hover:scale-110"
                 src="/images/services/new-item-3.jpg"
                 alt=""
               />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >

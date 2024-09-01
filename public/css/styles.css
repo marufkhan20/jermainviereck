@@ -238,3 +238,7 @@ body {
 .mobile-nav.active {
   left: 0 !important;
 }
+
+#services-mobile.active ul {
+  display: flex !important;
+}

@@ -116,7 +116,7 @@
                   class="container grid grid-cols-3 gap-10 bg-white p-7 border shadow rounded"
                 >
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/strategy">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -127,7 +127,7 @@
                           <h3
                             class="text-base mt-4 transition-all hover:text-primary"
                           >
-                            Financial Services
+                            Strategy
                           </h3>
                           <p class="text-xs mt-2 hover:text-black">
                             We accelerate the positive and responsible adoption
@@ -139,7 +139,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/engineering">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -162,7 +162,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/services/service-one">
+                    <a href="/services/analytics">
                       <div>
                         <img
                           class="w-full h-fit transition-all hover:opacity-80"
@@ -221,24 +221,31 @@
         <ul
           class="flex flex-col w-full justify-center pt-10 items-center gap-7 text-lg font-medium text-[#232323]"
         >
-          <li class="transition-all services-mobile">
+          <li class="transition-all" id="services-mobile">
             <div
-              class="flex items-center gap-2 transition-all hover:text-primary"
+              class="flex items-center gap-2 transition-all hover:text-primary cursor-pointer text-center justify-center"
+              id="service-mobile-btn"
             >
-              <a href="/services">Services</a>
+              <span>Services</span>
               <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="ml-5">
+            <ul
+              class="ml-5 !hidden flex-col gap-7 items-center justify-center pt-6"
+              id="service-mobile-item"
+            >
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Financial Services</a>
+                <a href="/services">All Services</a>
               </li>
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Engineering</a>
+                <a href="/services/strategy">Strategy</a>
               </li>
               <li class="transition-all hover:text-primary">
-                <a href="/services/service-one">Analytics</a>
+                <a href="/services/engineering">Engineering</a>
               </li>
-            </div>
+              <li class="transition-all hover:text-primary">
+                <a href="/services/analytics">Analytics</a>
+              </li>
+            </ul>
           </li>
           <li class="transition-all hover:text-primary">
             <a href="/cases">Cases</a>
@@ -317,27 +324,51 @@
         </div>
 
         <div class="mt-20">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+          <div class="overflow-x-hidden">
+            <div
+              class="slide flex space-x-10 flex-wrap-nowrap items-center logos"
+            >
+              <div class="shrink-0">
                 <img src="/images/services/company-1.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-2.svg" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-3.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-2.svg" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-4.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
                 <img src="/images/services/company-1.png" alt="" />
               </div>
-              <div class="swiper-slide">
+              <div class="shrink-0">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+
+              <div class="shrink-0">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-3.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-2.svg" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-4.png" alt="" />
+              </div>
+              <div class="shrink-0">
+                <img src="/images/services/company-1.png" alt="" />
+              </div>
+              <div class="shrink-0">
                 <img src="/images/services/company-3.png" alt="" />
               </div>
             </div>
@@ -521,7 +552,7 @@
     <!-- feedback section end -->
 
     <!-- cases section start -->
-    <section class="py-24 bg-[#F7F7F7]">
+    <section class="py-24 bg-[#F7F7F7] cases">
       <div class="container">
         <h2
           class="font-semibold text-center text-[24px] leading-[32px] sm:text-[30px] sm:leading-[40px] md:text-[36px] md:leading-[45px] lg:text-[45px] lg:leading-[55px]"
@@ -536,7 +567,13 @@
         <div class="mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/1.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/1.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -559,7 +596,13 @@
           </div>
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/2.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/2.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >
@@ -582,7 +625,13 @@
           </div>
           <div>
             <div class="relative">
-              <img class="rounded-lg w-full" src="/images/cases/3.jpg" alt="" />
+              <div class="rounded-lg overflow-hidden">
+                <img
+                  class="rounded-lg w-full transition-all hover:scale-110"
+                  src="/images/cases/3.jpg"
+                  alt=""
+                />
+              </div>
               <div
                 class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3"
               >

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require("fs");
+const services = require("./data/services");
 
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
@@ -25,7 +26,9 @@ app.get("/services", (req, res) => {
 });
 
 app.get("/services/:service", (req, res) => {
-  res.render("service-details.ejs", { title: "Service Details" });
+  const serviceName = req.params.service;
+  const service = services[serviceName];
+  res.render("service-details.ejs", { title: "Service Details", service });
 });
 
 app.get("/cases", (req, res) => {

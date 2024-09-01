@@ -214,3 +214,10 @@ const mobileNav = document.getElementById("mobile-nav");
 toggleMobileNavBtn.addEventListener("click", () => {
   mobileNav.classList.toggle("active");
 });
+
+const serviceMobileBtn = document.getElementById("service-mobile-btn");
+
+serviceMobileBtn.addEventListener("click", () => {
+  const servicesMobile = document.getElementById("services-mobile");
+  servicesMobile.classList.toggle("active");
+});
