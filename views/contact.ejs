@@ -209,33 +209,37 @@
         </div>
 
         <div class="block lg:hidden">
-          <i class="fa-solid fa-bars cursor-pointer" id="toggle-mobile-nav"></i>
+          <i
+            class="fa-solid fa-bars cursor-pointer text-xl"
+            id="toggle-mobile-nav"
+          ></i>
         </div>
       </div>
 
       <!-- mobile menu -->
       <nav
-        class="block lg:hidden fixed white min-h-screen inset-0 left-[-100%] top-[76px] w-full bg-white overflow-y-scroll mobile-nav transition-all duration-500"
+        class="block lg:hidden fixed white min-h-screen inset-0 left-[-100%] top-[76px] w-full bg-white overflow-y-scroll mobile-nav transition-all duration-500 px-10"
         id="mobile-nav"
       >
         <ul
-          class="flex flex-col w-full justify-center pt-10 items-center gap-7 text-lg font-medium text-[#232323]"
+          class="flex flex-col w-full pt-10 gap-7 text-lg font-medium text-[#232323]"
         >
           <li class="transition-all" id="services-mobile">
             <div
-              class="flex items-center gap-2 transition-all hover:text-primary cursor-pointer text-center justify-center"
+              class="flex gap-2 transition-all hover:text-primary cursor-pointer text-center justify-between items-center"
               id="service-mobile-btn"
             >
-              <span>Services</span>
+              <a
+                href="/services"
+                class="transition-all hover:underline underline-offset-4"
+                >Services</a
+              >
               <i class="fa-solid fa-chevron-down"></i>
             </div>
             <ul
-              class="ml-5 !hidden flex-col gap-7 items-center justify-center pt-6"
+              class="ml-5 !hidden flex-col gap-7 pt-6"
               id="service-mobile-item"
             >
-              <li class="transition-all hover:text-primary">
-                <a href="/services">All Services</a>
-              </li>
               <li class="transition-all hover:text-primary">
                 <a href="/services/strategy">Strategy</a>
               </li>
@@ -337,34 +341,34 @@
               <div class="grid sm:grid-cols-2 gap-8 sm:gap-5">
                 <input
                   type="text"
-                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                   placeholder="First Name"
                 />
                 <input
                   type="text"
-                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                   placeholder="Last Name"
                 />
               </div>
               <div class="grid sm:grid-cols-2 gap-8 sm:gap-5">
                 <input
                   type="text"
-                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                   placeholder="Company Name"
                 />
                 <input
                   type="number"
-                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                  class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                   placeholder="Phone Number"
                 />
               </div>
               <input
                 type="email"
-                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                 placeholder="Email"
               />
               <textarea
-                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2"
+                class="border-0 border-b-2 text-[17px] outline-none transition-all focus:border-blue-400 pb-2 w-full"
                 placeholder="Message"
               ></textarea>
               <div>
