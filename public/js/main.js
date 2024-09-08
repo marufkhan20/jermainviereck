@@ -107,8 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
 
-  console.log("nextButton", nextButton);
+  // Add extra slide handling
+  const totalSlides = slides.length - 1;
+  console.log("totalSlides", totalSlides);
 
+  // Initialize currentIndex, considering the extra slide
   let currentIndex = 0;
 
   function updateSlider() {
@@ -117,15 +120,19 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.style.transform = `translateX(${offset}%)`;
   }
 
+  // Adjust the slider width based on the number of slides
+  slider.style.width = `${totalSlides * 100}%`;
+
+  // Attach event listeners to buttons
   prevButton.addEventListener("click", function () {
     // Move to the previous slide, loop back if at the start
-    currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
+    currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - 1;
     updateSlider();
   });
 
   nextButton.addEventListener("click", function () {
     // Move to the next slide, loop back if at the end
-    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+    currentIndex = currentIndex < totalSlides - 1 ? currentIndex + 1 : 0;
     updateSlider();
   });
 

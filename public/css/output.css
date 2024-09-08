@@ -1339,6 +1339,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1397,10 +1402,6 @@ video {
 
 .pt-\[80px\]{
   padding-top: 80px;
-}
-
-.pl-10{
-  padding-left: 2.5rem;
 }
 
 .text-center{
@@ -1615,10 +1616,6 @@ video {
 
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
-}
-
-.underline-offset-1{
-  text-underline-offset: 1px;
 }
 
 .underline-offset-4{
@@ -1967,6 +1964,11 @@ body {
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(255 176 75 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{

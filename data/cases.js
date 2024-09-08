@@ -1,0 +1,191 @@
+const cases = [
+  {
+    id: "12065",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/ai-powered-chatbots-transforming-customer-support-for-a-global-insurance-leader/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/thumbnail-1-1024x680.jpg",
+      alt: "two women working",
+      width: 1366,
+      height: 907,
+    },
+    categories: ["Financial-Services", "Strategy"],
+    title:
+      "AI-Powered Chatbots: Transforming Customer Support for a Global Insurance Leader",
+  },
+  {
+    id: "11976",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/vinnovas-data-driven-impact-on-the-life-science-industry/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2024/02/P1065121-1024x683.jpg",
+      alt: "Vinnova-case-study",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Healthcare-Life Sciences", "Public-Society"],
+    title: "Vinnova’s Data-Driven Impact on the Life Science Industry",
+  },
+  {
+    id: "11744",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/investing-in-impact-redefining-danish-social-welfare/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/11/P1032050-min-1024x683.jpg",
+      alt: "",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Public-Society"],
+    title: "Investing in Impact: Redefining Danish Social Welfare",
+  },
+  {
+    id: "11294",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/building-a-search-engine-for-unstructured-clinical-trial-data/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/07/IMG_0205-1024x683.jpg",
+      alt: "",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Engineering", "Healthcare-Life-Sciences"],
+    title: "Building a Search Engine for Unstructured Clinical Trial Data",
+  },
+  {
+    id: "10585",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/data-driven-transformation-for-sustainable-growth-at-nibc/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/office_nibc_the_hague_2jpg-2-.jpeg",
+      alt: "NIBC",
+      width: 955,
+      height: 521,
+    },
+    categories: ["Financial-Services"],
+    title:
+      "Data-Driven Transformation for Sustainable Growth at NIBC Retail Bank",
+  },
+  {
+    id: "10582",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/customer-feedback-analysis-in-the-food-retail-sector/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/jason-briscoe-n4ymhyyFY7A-unsplash-scaled-1-1024x683.jpg",
+      alt: "People cooking",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Agriculture-Food"],
+    title: "Customer Feedback Analysis in the Food Retail Sector",
+  },
+  {
+    id: "10579",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/adc-and-ubiops-help-iv-infra-with-major-digitisation-battle/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/prins-claus-werknemert-1024x576.jpg",
+      alt: "Worker with wide sky",
+      width: 1024,
+      height: 576,
+    },
+    categories: ["Engineering"],
+    title: "ADC and UbiOps Help Iv-Infra with Major Digitisation Battle",
+  },
+  // New items
+  {
+    id: "12065",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/ai-powered-chatbots-transforming-customer-support-for-a-global-insurance-leader/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/thumbnail-1-1024x680.jpg",
+      alt: "two women working",
+      width: 1366,
+      height: 907,
+    },
+    categories: ["Financial-Services", "Strategy"],
+    title:
+      "AI-Powered Chatbots: Transforming Customer Support for a Global Insurance Leader",
+  },
+  {
+    id: "11976",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/vinnovas-data-driven-impact-on-the-life-science-industry/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2024/02/P1065121-1024x683.jpg",
+      alt: "Vinnova-case-study",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Healthcare-Life Sciences", "Public-Society"],
+    title: "Vinnova’s Data-Driven Impact on the Life Science Industry",
+  },
+  {
+    id: "11744",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/investing-in-impact-redefining-danish-social-welfare/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/11/P1032050-min-1024x683.jpg",
+      alt: "",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Public-Society"],
+    title: "Investing in Impact: Redefining Danish Social Welfare",
+  },
+  {
+    id: "11294",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/building-a-search-engine-for-unstructured-clinical-trial-data/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/07/IMG_0205-1024x683.jpg",
+      alt: "",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Engineering", "Healthcare-Life-Sciences"],
+    title: "Building a Search Engine for Unstructured Clinical Trial Data",
+  },
+  {
+    id: "10585",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/data-driven-transformation-for-sustainable-growth-at-nibc/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/office_nibc_the_hague_2jpg-2-.jpeg",
+      alt: "NIBC",
+      width: 955,
+      height: 521,
+    },
+    categories: ["Financial-Services"],
+    title:
+      "Data-Driven Transformation for Sustainable Growth at NIBC Retail Bank",
+  },
+  {
+    id: "10582",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/customer-feedback-analysis-in-the-food-retail-sector/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/jason-briscoe-n4ymhyyFY7A-unsplash-scaled-1-1024x683.jpg",
+      alt: "People cooking",
+      width: 1024,
+      height: 683,
+    },
+    categories: ["Agriculture-Food"],
+    title: "Customer Feedback Analysis in the Food Retail Sector",
+  },
+  {
+    id: "10579",
+    hasImg: true,
+    link: "https://adc-consulting.com/cases/adc-and-ubiops-help-iv-infra-with-major-digitisation-battle/",
+    img: {
+      src: "https://adc-consulting.com/wp-content/uploads/2023/08/prins-claus-werknemert-1024x576.jpg",
+      alt: "Worker with wide sky",
+      width: 1024,
+      height: 576,
+    },
+    categories: ["Engineering"],
+    title: "ADC and UbiOps Help Iv-Infra with Major Digitisation Battle",
+  },
+];
+
+module.exports = cases;

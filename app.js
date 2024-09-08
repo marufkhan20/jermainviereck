@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const fs = require("fs");
 const services = require("./data/services");
+const cases = require("./data/cases");
 
 // Set EJS as the templating engine
 app.set("view engine", "ejs");
@@ -32,7 +33,28 @@ app.get("/services/:service", (req, res) => {
 });
 
 app.get("/cases", (req, res) => {
-  res.render("cases.ejs", { title: "Cases Page" });
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  const queryParams = new URLSearchParams(url.search);
+
+  const category = queryParams.get("category");
+  let filteredCases = [];
+  console.log("category", category);
+
+  if (category) {
+    filteredCases = cases.filter((item) =>
+      item?.categories?.includes(category)
+    );
+  } else {
+    filteredCases = cases;
+  }
+
+  console.log("filteredCases", filteredCases);
+
+  res.render("cases.ejs", {
+    title: "Cases Page",
+    cases: filteredCases,
+    activeCategory: category || "all",
+  });
 });
 
 app.get("/cases/:case", (req, res) => {
