@@ -228,3 +228,11 @@ serviceMobileBtn.addEventListener("click", () => {
   const servicesMobile = document.getElementById("services-mobile");
   servicesMobile.classList.toggle("active");
 });
+
+// filter show in case
+const showFilterBtn = document.getElementById("filter-btn");
+const caseFilter = document.getElementById("case-filter");
+
+showFilterBtn.addEventListener("click", () => {
+  caseFilter.classList.toggle("active");
+});

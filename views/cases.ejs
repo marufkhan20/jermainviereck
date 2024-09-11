@@ -277,8 +277,17 @@
           solutions.
         </p>
 
-        <div class="mt-16">
-          <ul class="flex flex-wrap items-center gap-2">
+        <div class="mt-16 case-filter" id="case-filter">
+          <button
+            class="rounded-full border py-3 px-8 transition-all hover:bg-black hover:text-white hover:border-black lg:hidden flex items-center gap-3 outline-none"
+            id="filter-btn"
+          >
+            <i class="fa-solid fa-plus"></i>
+            <span>Filter</span>
+          </button>
+          <ul
+            class="mt-8 transition-all lg:mt-0 hidden lg:flex flex-wrap items-center gap-2"
+          >
             <li>
               <a
                 class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'all' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"

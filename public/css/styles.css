@@ -242,3 +242,9 @@ body {
 #services-mobile.active ul {
   display: flex !important;
 }
+
+@media (min-width: 0px) and (max-width: 1024px) {
+  .case-filter.active ul {
+    display: flex !important;
+  }
+}
