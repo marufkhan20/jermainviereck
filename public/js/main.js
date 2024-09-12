@@ -236,3 +236,96 @@ const caseFilter = document.getElementById("case-filter");
 showFilterBtn.addEventListener("click", () => {
   caseFilter.classList.toggle("active");
 });
+
+// get cases
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryList = document.getElementById("category-list");
+  const categoryButtons = categoryList.querySelectorAll(".category-btn");
+
+  // Function to handle active class toggle and fetch data
+  function handleCategoryClick(event) {
+    const clickedButton = event.target;
+
+    // Remove active class from all buttons
+    categoryButtons.forEach((button) =>
+      button.classList.remove("active", "bg-black", "text-white")
+    );
+
+    // Add active class to the clicked button
+    clickedButton.classList.add("active", "bg-black", "text-white");
+
+    // Fetch data based on the clicked category
+    const category = clickedButton.dataset.category;
+
+    // Example fetch function, replace URL with your API endpoint
+    fetch(`/all-cases?category=${category}`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle rendering of fetched data
+        renderCases(data.cases);
+      })
+      .catch((error) => {
+        console.error("Error fetching cases:", error);
+      });
+  }
+
+  // Set "All" as the default active category and fetch the initial data
+  const defaultCategoryButton = categoryList.querySelector(
+    '[data-category="all"]'
+  );
+  defaultCategoryButton.classList.add("active", "bg-black", "text-white");
+
+  // Fetch initial data for "All" category
+  fetch("/cases?category=all")
+    .then((response) => response.json())
+    .then((data) => {
+      renderCases(data.cases);
+    })
+    .catch((error) => {
+      console.error("Error fetching cases:", error);
+    });
+
+  // Add click event listener to each button
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", handleCategoryClick);
+  });
+
+  // Example function to render cases (you need to implement this based on your UI)
+  function renderCases(cases) {
+    const caseList = document.getElementById("case-list");
+    caseList.innerHTML = ""; // Clear current cases
+
+    // Loop through the cases and append them to the DOM
+    cases.forEach((item) => {
+      const caseElement = document.createElement("div");
+      caseElement.classList.add("case-item");
+      caseElement.innerHTML = `
+        <div class="relative">
+          <div class="rounded-lg overflow-hidden">
+            <img
+              class="rounded-lg w-full transition-all hover:scale-110"
+              src="${item?.img?.src || ""}"
+              alt=""
+            />
+          </div>
+          <div class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3">
+            ${item?.categories
+              ?.map(
+                (category) => `
+              <span class="inline-block border rounded-full px-4 py-1">${category}</span>
+            `
+              )
+              .join("")}
+          </div>
+        </div>
+        <a href="/cases/case-one" class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]">
+          ${item?.title}
+        </a>
+        <a href="/cases/case-one" class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary">
+          Read more
+        </a>
+      `;
+      caseList.appendChild(caseElement);
+    });
+  }
+});

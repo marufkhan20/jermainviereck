@@ -287,69 +287,81 @@
           </button>
           <ul
             class="mt-8 transition-all lg:mt-0 hidden lg:flex flex-wrap items-center gap-2"
+            id="category-list"
           >
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'all' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases"
-                >All</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="all"
               >
+                All
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Agriculture-Food' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Agriculture-Food"
-                >Agriculture & Food</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Agriculture-Food"
               >
+                Agriculture & Food
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Analytics' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Analytics"
-                >Analytics</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Analytics"
               >
+                Analytics
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Engineering' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Engineering"
-                >Engineering</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Engineering"
               >
+                Engineering
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Financial-Services' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Financial-Services"
-                >Financial Services</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Financial-Services"
               >
+                Financial Services
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Healthcare-Life-Sciences' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Healthcare-Life-Sciences"
-                >Healthcare & Life Sciences</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Healthcare-Life-Sciences"
               >
+                Healthcare & Life Sciences
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Public-Society' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Public-Society"
-                >Public & Society</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Public-Society"
               >
+                Public & Society
+              </button>
             </li>
             <li>
-              <a
-                class="inline-block py-1 px-3 text-lg transition-all <%- activeCategory === 'Strategy' ? 'bg-black text-white' : 'hover:bg-black hover:text-white' %> rounded"
-                href="/cases?category=Strategy"
-                >Strategy</a
+              <button
+                class="category-btn inline-block py-1 px-3 text-lg transition-all rounded"
+                data-category="Strategy"
               >
+                Strategy
+              </button>
             </li>
           </ul>
         </div>
 
-        <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          id="case-list"
+          class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6"
+        >
           <% cases?.forEach(item => { %>
-          <div>
+          <div id="case-item">
             <div class="relative">
               <div class="rounded-lg overflow-hidden">
                 <img

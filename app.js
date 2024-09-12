@@ -40,7 +40,7 @@ app.get("/cases", (req, res) => {
   let filteredCases = [];
   console.log("category", category);
 
-  if (category) {
+  if (category !== "all") {
     filteredCases = cases.filter((item) =>
       item?.categories?.includes(category)
     );
@@ -52,9 +52,30 @@ app.get("/cases", (req, res) => {
 
   res.render("cases.ejs", {
     title: "Cases Page",
-    cases: filteredCases,
+    cases,
     activeCategory: category || "all",
   });
+});
+
+app.get("/all-cases", (req, res) => {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  const queryParams = new URLSearchParams(url.search);
+
+  const category = queryParams.get("category");
+  let filteredCases = [];
+  console.log("category", category);
+
+  if (category !== "all") {
+    filteredCases = cases.filter((item) =>
+      item?.categories?.includes(category)
+    );
+  } else {
+    filteredCases = cases;
+  }
+
+  console.log("filteredCases", filteredCases);
+
+  res.json({ cases: filteredCases, activeCategory: category });
 });
 
 app.get("/cases/:case", (req, res) => {
