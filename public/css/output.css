@@ -2329,12 +2329,24 @@ body {
 }
 
 @media (min-width: 1280px){
+  .xl\:flex{
+    display: flex;
+  }
+
   .xl\:w-\[60\%\]{
     width: 60%;
   }
 
+  .xl\:flex-1{
+    flex: 1 1 0%;
+  }
+
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
