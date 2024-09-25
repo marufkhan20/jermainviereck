@@ -4,7 +4,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/ai-powered-chatbots-transforming-customer-support-for-a-global-insurance-leader/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/thumbnail-1-1024x680.jpg",
+      src: "/images/cases/1.jpg",
       alt: "two women working",
       width: 1366,
       height: 907,
@@ -18,7 +18,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/vinnovas-data-driven-impact-on-the-life-science-industry/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2024/02/P1065121-1024x683.jpg",
+      src: "/images/cases/2.jpg",
       alt: "Vinnova-case-study",
       width: 1024,
       height: 683,
@@ -31,7 +31,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/investing-in-impact-redefining-danish-social-welfare/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/11/P1032050-min-1024x683.jpg",
+      src: "/images/cases/3.jpg",
       alt: "",
       width: 1024,
       height: 683,
@@ -44,7 +44,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/building-a-search-engine-for-unstructured-clinical-trial-data/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/07/IMG_0205-1024x683.jpg",
+      src: "/images/cases/2.jpg",
       alt: "",
       width: 1024,
       height: 683,
@@ -57,7 +57,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/data-driven-transformation-for-sustainable-growth-at-nibc/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/office_nibc_the_hague_2jpg-2-.jpeg",
+      src: "/images/cases/1.jpg",
       alt: "NIBC",
       width: 955,
       height: 521,
@@ -71,7 +71,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/customer-feedback-analysis-in-the-food-retail-sector/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/jason-briscoe-n4ymhyyFY7A-unsplash-scaled-1-1024x683.jpg",
+      src: "/images/cases/3.jpg",
       alt: "People cooking",
       width: 1024,
       height: 683,
@@ -84,7 +84,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/adc-and-ubiops-help-iv-infra-with-major-digitisation-battle/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/prins-claus-werknemert-1024x576.jpg",
+      src: "/images/cases/1.jpg",
       alt: "Worker with wide sky",
       width: 1024,
       height: 576,
@@ -98,7 +98,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/ai-powered-chatbots-transforming-customer-support-for-a-global-insurance-leader/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/thumbnail-1-1024x680.jpg",
+      src: "/images/cases/3.jpg",
       alt: "two women working",
       width: 1366,
       height: 907,
@@ -112,7 +112,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/vinnovas-data-driven-impact-on-the-life-science-industry/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2024/02/P1065121-1024x683.jpg",
+      src: "/images/cases/1.jpg",
       alt: "Vinnova-case-study",
       width: 1024,
       height: 683,
@@ -125,7 +125,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/investing-in-impact-redefining-danish-social-welfare/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/11/P1032050-min-1024x683.jpg",
+      src: "/images/cases/2.jpg",
       alt: "",
       width: 1024,
       height: 683,
@@ -138,7 +138,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/building-a-search-engine-for-unstructured-clinical-trial-data/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/07/IMG_0205-1024x683.jpg",
+      src: "/images/cases/1.jpg",
       alt: "",
       width: 1024,
       height: 683,
@@ -151,7 +151,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/data-driven-transformation-for-sustainable-growth-at-nibc/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/office_nibc_the_hague_2jpg-2-.jpeg",
+      src: "/images/cases/3.jpg",
       alt: "NIBC",
       width: 955,
       height: 521,
@@ -165,7 +165,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/customer-feedback-analysis-in-the-food-retail-sector/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/jason-briscoe-n4ymhyyFY7A-unsplash-scaled-1-1024x683.jpg",
+      src: "/images/cases/3.jpg",
       alt: "People cooking",
       width: 1024,
       height: 683,
@@ -178,7 +178,7 @@ const cases = [
     hasImg: true,
     link: "https://adc-consulting.com/cases/adc-and-ubiops-help-iv-infra-with-major-digitisation-battle/",
     img: {
-      src: "https://adc-consulting.com/wp-content/uploads/2023/08/prins-claus-werknemert-1024x576.jpg",
+      src: "/images/cases/2.jpg",
       alt: "Worker with wide sky",
       width: 1024,
       height: 576,
