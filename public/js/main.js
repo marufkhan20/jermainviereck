@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         // Handle rendering of fetched data
+        console.log("data.cases", data.cases);
         renderCases(data.cases);
       })
       .catch((error) => {
@@ -292,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Example function to render cases (you need to implement this based on your UI)
   function renderCases(cases) {
+    console.log("cases", cases);
     const caseList = document.getElementById("case-list");
     caseList.innerHTML = ""; // Clear current cases
 
@@ -300,30 +302,42 @@ document.addEventListener("DOMContentLoaded", () => {
       const caseElement = document.createElement("div");
       caseElement.classList.add("case-item");
       caseElement.innerHTML = `
-        <div class="relative">
-          <div class="rounded-lg overflow-hidden">
-            <img
-              class="rounded-lg w-full transition-all hover:scale-110"
-              src="${item?.img?.src || ""}"
-              alt=""
-            />
-          </div>
-          <div class="bg-white absolute bottom-0 left-0 pt-4 pr-6 rounded-tr-lg flex items-center gap-3">
-            ${item?.categories
-              ?.map(
-                (category) => `
-              <span class="inline-block border rounded-full px-4 py-1">${category}</span>
+<div class="flex flex-col h-full">
+            <div class="flex-1">
+              <div class="relative">
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    class="rounded-lg w-full transition-all hover:scale-110"
+                    src="${item?.img?.src || ""}"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center flex-wrap gap-3">
+                ${item?.categories
+                  ?.map(
+                    (category) => `
+              <span class="inline-block text-sm border rounded-full px-4 py-1"
+                  >${category}</span
+                >
             `
-              )
-              .join("")}
+                  )
+                  .join("")}
+              </div>
+
+              <a
+                href="/cases/case-one"
+                class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]"
+                >${item?.title}</a
+              >
+            </div>
+            <a
+              href="/cases/case-one"
+              class="uppercase mt-2 inline-block font-semibold text-[#666] transition-all justify-end hover:text-primary"
+              >Read more</a
+            >
           </div>
-        </div>
-        <a href="/cases/case-one" class="mt-5 inline-block transition-all hover:text-primary font-semibold text-[26px] leading-[26px]">
-          ${item?.title}
-        </a>
-        <a href="/cases/case-one" class="uppercase mt-4 inline-block font-semibold text-[#666] transition-all hover:text-primary">
-          Read more
-        </a>
       `;
       caseList.appendChild(caseElement);
     });
